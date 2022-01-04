@@ -59,7 +59,7 @@ del c  #For Memory Efficiency
 images = np.array(images)
 y = np.array(y)
 
-X_train, X_test, y_train, y_test = train_test_split(images, y, test_size=0.10, stratify= y, random_state =2)
+X_train, X_test, y_train, y_test = train_test_split(images, y, test_size=0.15, stratify= y, random_state =2)
 
 """Our proposed Convolutional Model for extracting features"""
 
@@ -130,7 +130,7 @@ x = feature_engg_data.loc[:, feature_engg_data.columns].values
 x = StandardScaler().fit_transform(x)
 
 """Splitting the Data into Training & Testing Set"""
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.10, stratify= y, random_state =0)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.15, stratify= y, random_state =0)
 
 """Apply The Machine Learning ALgorithms For Classification"""
 
